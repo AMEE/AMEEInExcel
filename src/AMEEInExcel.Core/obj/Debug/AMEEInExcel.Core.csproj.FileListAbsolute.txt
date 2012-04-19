@@ -1,0 +1,56 @@
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.pdb
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.pdb
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.pdb
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.xml
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.pdb
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.dll
+C:\Documents and Settings\vmuser\My Documents\code\excel\mrdavidlaing-AMEEInExcel-30b01f5\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.pdb
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.pdb
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.pdb
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.pdb
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.xml
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.pdb
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.dll
+C:\Users\Public\Documents\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.pdb
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.pdb
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.pdb
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.pdb
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.xml
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.pdb
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.xml
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\ResolveAssemblyReference.cache
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.dll
+Z:\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.pdb
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEInExcel.Core.pdb
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\AMEEClient.CS.pdb
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.pdb
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.JsonClient.xml
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\CityIndex.ReflectiveLoggingAdapter.pdb
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\bin\Debug\Newtonsoft.Json.xml
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.dll
+C:\development\build\AMEEInExcel\src\AMEEInExcel.Core\obj\Debug\AMEEInExcel.Core.pdb

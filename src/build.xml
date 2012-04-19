@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="BuildAndPublish" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$([MSBuild]::Unescape('$(MSBuildProjectDirectory)'))\..\tools\msbuild\MSBuildCommunityTasks\</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::Unescape('$(MSBuildCommunityTasksPath)'))\MSBuild.Community.Tasks.Targets"/>
+  
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+	  <ReleaseChannel>bleedingedge</ReleaseChannel>
+	  <MajorVersion>0</MajorVersion>
+	  <MinorVersion>0</MinorVersion> <!-- 0 indicates a stable build -->
+	  <BuildVersion>0</BuildVersion> <!-- This gets set by the build server -->
+  </PropertyGroup>
+
+  <Target Name="BuildAndPublish" DependsOnTargets="UpdateVersion">
+     <MSBuild Condition="'$(ReleaseChannel)'!='stable'"
+			 Projects="$(MSBuildProjectDirectory)\AMEEInExcel.sln" Targets="Rebuild;Publish" 
+             Properties="Configuration=$(Configuration);Platform=$(Platform);PublishDir=$(MSBuildProjectDirectory)\..\_setup\;InstallUrl=http://code.labs.cityindex.com/AMEEInExcel/_setup;IsWebBootstrapper=true" />
+     
+  </Target>
+  
+  <Target Name="UpdateVersion" Condition="'$(Configuration)' == 'Release'">
+	<Message Text="Updating version to $(MajorVersion).$(MinorVersion).$(BuildVersion).0" />
+	<FileUpdate 
+			Files="$(MSBuildProjectDirectory)\AMEEInExcel\Properties\AssemblyInfo.cs"
+			Regex="AssemblyVersion\(&quot;.*&quot;\)"
+			ReplacementText="AssemblyVersion(&quot;$(MajorVersion).$(MinorVersion).$(BuildVersion).0&quot;)" 
+			/>
+	<FileUpdate 
+			Files="$(MSBuildProjectDirectory)\AMEEInExcel\AMEEInExcel.csproj"
+			Regex="&lt;ApplicationVersion&gt;.*&lt;/ApplicationVersion&gt;"
+			ReplacementText="&lt;ApplicationVersion&gt;$(MajorVersion).$(MinorVersion).$(BuildVersion).0&lt;/ApplicationVersion&gt;" 
+			/>
+
+</Target>
+</Project>

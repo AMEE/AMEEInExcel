@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Tools.Office.AppInfoDocument.v9.0</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.Tools.OfficeOleAppInfoDocument"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Dispose"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#DeleteItem(System.String,System.String)">
+      <param name="type"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#ReadItem(System.String,System.String)">
+      <param name="type"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#WriteItem(System.String,System.String,System.Byte[])">
+      <param name="type"></param>
+      <param name="id"></param>
+      <param name="data"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#Close"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#GetDocument"></member>
+    <member name="P:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#HasCustomization"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#RemoveCustomization"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#SetDocument(System.String,System.Byte[],System.IO.FileAccess)">
+      <param name="fileName"></param>
+      <param name="data"></param>
+      <param name="access"></param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.OfficeOleAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#SupportsCachedDataManifest"></member>
+    <member name="T:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Dispose"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#DeleteItem(System.String,System.String)">
+      <param name="type"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#ReadItem(System.String,System.String)">
+      <param name="type"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfo#WriteItem(System.String,System.String,System.Byte[])">
+      <param name="type"></param>
+      <param name="id"></param>
+      <param name="data"></param>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#Close"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#GetDocument"></member>
+    <member name="P:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#HasCustomization"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#RemoveCustomization"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#SetDocument(System.String,System.Byte[],System.IO.FileAccess)">
+      <param name="fileName"></param>
+      <param name="data"></param>
+      <param name="fileAccess"></param>
+    </member>
+    <member name="P:Microsoft.Office.Tools.OfficeOpenXmlAppInfoDocument.Microsoft#VisualStudio#Tools#Applications#Runtime#IAppInfoDocument#SupportsCachedDataManifest"></member>
+    <member name="T:Microsoft.Office.Tools.OfficeXpsDocumentException">
+      <summary>The exception that is thrown when the Visual Studio Tools for Office runtime cannot perform an operation on a Microsoft Office Open XML Formats document because the format of the document is invalid.</summary>
+    </member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String)"></member>
+    <member name="M:Microsoft.Office.Tools.OfficeXpsDocumentException.#ctor(System.String,System.Exception)"></member>
+  </members>
+</doc>
