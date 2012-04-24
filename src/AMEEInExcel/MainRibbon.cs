@@ -10,6 +10,8 @@ namespace AMEEInExcel
     {
         public static MainRibbon Instance;
 
+        private static AMEEdiscoverForm discoverForm;
+
         private void MainRibbon_Load(object sender, RibbonUIEventArgs e)
         {
             Instance = this;
@@ -18,8 +20,17 @@ namespace AMEEInExcel
 
         private void findButton_Click(object sender, RibbonControlEventArgs e)
         {
-            var f = new AMEEdiscoverForm();
-            f.ShowDialog();
+            // want a single instance of the form 
+            // if the user presses the button twice the existing one
+            // is brought forward
+            if (discoverForm == null)
+            {
+                discoverForm = new AMEEdiscoverForm();
+
+                discoverForm.Show();
+            }
+
+            discoverForm.BringToFront();
         }
 
         private void findUIDButton_Click(object sender, RibbonControlEventArgs e)
