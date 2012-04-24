@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 // the MS Office Interop 
 using System.Reflection;
@@ -14,8 +15,26 @@ using AMEEInExcel.Model;
 
 namespace AMEEInExcel.Mapping
 {
+
     class WorksheetData
     {
+        public static Boolean DuplicateWorkSheet(string workSheetName)
+        {
+            // all of the name can also be found in wrkBook.Names
+            // but we are going to loop throught the Worksheets
+            Excel.Workbook wrkBook = (Excel.Workbook)ThisAddIn.Instance.Application.ActiveWorkbook;
+
+            foreach (Excel.Worksheet tmp in wrkBook.Worksheets)
+            {
+                if (workSheetName == tmp.Name)
+
+                    return true;
+
+            }
+
+            return false;
+
+        }
 
         public static void BuildExcelWorksheet(DataCategory categoryData)
         {
@@ -26,7 +45,36 @@ namespace AMEEInExcel.Mapping
             newWorksheet = (Excel.Worksheet)ThisAddIn.Instance.Application.Worksheets.Add();
 
             // 31 chars is the longest length for the sheetname
-            newWorksheet.Name = StringHelper.LimitWithElipsesOnWordBoundary(categoryData.WikiName.Replace("_", " "), 31);
+            String newWorkSheetName = StringHelper.LimitWithElipsesOnWordBoundary(categoryData.WikiName.Replace("_", " "), 31);
+
+            // the actual name may contain ellipses so have to check with them in the name
+            if (DuplicateWorkSheet(newWorkSheetName))
+            {
+                Boolean uniqueName = false;
+
+                // loop & try to find a unique name
+                for (int i = 1; i < 100; i++)
+                {
+                    // modify the Wikiname 
+                    if (!DuplicateWorkSheet(newWorkSheetName.Substring(0, newWorkSheetName.Length - (i.ToString().Length + 2)) + "(" + i.ToString() + ")"))
+                    {
+                        newWorkSheetName = newWorkSheetName.Substring(0, newWorkSheetName.Length - (i.ToString().Length + 2)) + "(" + i.ToString() + ")";
+                        uniqueName = true;
+                        break;
+                    }
+
+                }
+
+                if (!uniqueName)
+                {
+                    // if we get here then give up trying to find a unique name
+                    //throw new Exception("Failed to find a unique name for the excel work sheet. Please try renaming one and try again");
+                    MessageBox.Show("Please try renaming an existing worksheet and try again", "Failed to find a unique worksheet name.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+            newWorksheet.Name = newWorkSheetName;
 
             //Add table headers going cell by cell.
             int rowCntr = 1;
