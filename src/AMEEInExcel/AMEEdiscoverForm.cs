@@ -26,8 +26,11 @@ namespace AMEEInExcel
         public AMEEdiscoverForm()
         {
             InitializeComponent();
-        }
 
+            webBrowser1.CanGoBackChanged += new EventHandler(webBrowser1_CanGoBackChanged);
+            webBrowser1.CanGoForwardChanged += new EventHandler(webBrowser1_CanGoForwardChanged);
+
+        }
 
         private void AMEEdiscoverForm_Click(object sender, EventArgs e)
         {
@@ -237,12 +240,27 @@ namespace AMEEInExcel
 
         #endregion
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
 
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
 
+        // Disables the Back button at the beginning of the navigation history.
+        private void webBrowser1_CanGoBackChanged(object sender, EventArgs e)
+        {
+            backButton.Enabled = webBrowser1.CanGoBack;
+        }
 
-
-
-
+        // Disables the Forward button at the end of navigation history.
+        private void webBrowser1_CanGoForwardChanged(object sender, EventArgs e)
+        {
+            forwardButton.Enabled = webBrowser1.CanGoForward;
+        }
 
     }
 

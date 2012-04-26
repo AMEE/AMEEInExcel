@@ -32,6 +32,8 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.forwardButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.forwardButton);
+            this.panel1.Controls.Add(this.backButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,6 +73,30 @@
             this.button1.Text = "Generate Data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.AMEEdiscoverForm_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Enabled = false;
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(639, 4);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(64, 48);
+            this.backButton.TabIndex = 1;
+            this.backButton.Text = "Previous";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // forwardButton
+            // 
+            this.forwardButton.Enabled = false;
+            this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
+            this.forwardButton.Location = new System.Drawing.Point(708, 4);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(64, 48);
+            this.forwardButton.TabIndex = 2;
+            this.forwardButton.Text = "Forward";
+            this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // AMEEdiscoverForm
             // 
@@ -92,5 +120,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button forwardButton;
+        private System.Windows.Forms.Button backButton;
     }
 }
