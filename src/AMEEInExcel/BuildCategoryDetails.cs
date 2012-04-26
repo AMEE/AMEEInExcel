@@ -131,28 +131,56 @@ namespace AMEEInExcel
 
         }
 
+
         public static void GetDataItems(String domain, String categoryName)
+        { 
+            int startItem = 0;
+            int numberItems = 100; // 100 appears to be the maximum
+
+            while (GetDataItems(domain, categoryName, startItem, numberItems))
+            {
+                startItem += numberItems;
+            }
+            
+        }
+
+        public static Boolean GetDataItems(String domain, String categoryName,int start,int limit)
         {
-            List<String> uids = new List<String>();
-            String wikiName = "";
-            String fullPath = "";
+            Boolean truncated = false; 
 
-            String url = "https://" + domain + "/" + _apiVersion + "/" + "categories" + "/" + categoryName;
+            // https://api-stage.amee.com/3/categories/Kitchen_Clothes_Washers/items;full?resultStart=301&resultLimit=100
 
-            // var parameters = new Dictionary<string, string>() { { "uid", "uid" } };
+            String url = "https://" + domain + "/" + _apiVersion + "/" + "categories" + "/" + categoryName + "/items;full" + "?resultStart=" + start + "&resultLimit=" + limit;
 
-            HttpWebRequest request = AMEEWebRequest(url + "/items;full");
+            HttpWebRequest request = AMEEWebRequest(url);
 
             try
             {
                 // Get response  
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
+                    String truncatedStr = "false";
+
                     // Get the response stream  
                     StreamReader reader = new StreamReader(response.GetResponseStream());
 
                     XPathDocument doc = new XPathDocument(reader);
                     XPathNavigator nav = doc.CreateNavigator();
+
+                    try
+                    {
+                        MapElementAttribute(nav, "/Representation/Items", "truncated", ref truncatedStr);
+                        truncated = Boolean.Parse(truncatedStr);
+                    }
+                    catch (ArgumentException)
+                    {
+                        truncated = false;
+                    }
+                    catch (FormatException)
+                    {
+                        truncated = false;                        
+                    }  
+
 
                     XPathExpression expr;
                     expr = nav.Compile("/Representation/Items/Item");
@@ -160,12 +188,21 @@ namespace AMEEInExcel
 
                     int cntr = 0;
 
-                    categoryData.item = new DataItem[iterator.Count];
+                    if (categoryData.item == null)
+                    {
+                        cntr = 0;
+                        // 1st time - a simple allocation of memory
+                        categoryData.item = new DataItem[iterator.Count];
+                    }
+                    else
+                    {
+                        cntr = categoryData.item.Length;
+                        // subsequent times - need to resize the array                                        
+                        Array.Resize(ref categoryData.item, categoryData.item.Length + iterator.Count);
+                    }
 
                     while (iterator.MoveNext())
                     {
-
-
 
                         categoryData.item[cntr] = new DataItem();
 
@@ -237,9 +274,7 @@ namespace AMEEInExcel
                             "",
                             XmlDataType.Text);
 
-                        XPathNodeIterator valuesiterator = valuesnav.Select(selectExpression);// .Select("/Value");
-
-                        //XPathNodeIterator valuesiterator = valuesnav.Select("/Value");
+                        XPathNodeIterator valuesiterator = valuesnav.Select(selectExpression);
 
                         categoryData.item[cntr].ItemValues = new ItemValue[valuesnav.Select("/Value").Count];
 
@@ -297,9 +332,10 @@ namespace AMEEInExcel
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
             }
 
-
+            return truncated;
         }
 
         public static Boolean TestNode(string xmlFragment, string nodeName)
@@ -536,85 +572,4 @@ namespace AMEEInExcel
         #endregion
     }
 }
-
-
-
-
-//CreateNewWorkSheet();
-//ThisAddIn.Instance.Application.Worksheets.Add();
-
-/*
-
-Excel.Worksheet newWorksheet;
-newWorksheet = (Excel.Worksheet)ThisAddIn.Instance.Application.Worksheets.Add();
-
-
-// 31 chars is the longest length for the sheetname
-newWorksheet.Name = StringHelper.LimitWithElipsesOnWordBoundary(platformWikiName.Replace("_", " "), 31);
-
-//Add table headers going cell by cell.
-newWorksheet.Cells[1, 1] = "WikiName";
-
-// add the uids to the sheet
-int rowCntr = 2, colCntr = 1;
-
-for (int cntr = 0; cntr < uids.Count; cntr++)
-{
-    newWorksheet.Cells[rowCntr++, colCntr] = wikiName;
-}
-
-newWorksheet.Cells[1, 2] = "path";
-
-rowCntr = 2; colCntr = 2;
-
-foreach (String ids in uids)
-{
-    newWorksheet.Cells[rowCntr++, colCntr] = fullPath;
-}
-
-newWorksheet.Cells[1, 3] = "uid";
-
-// add the uids to the sheet
-rowCntr = 2; colCntr = 3;
-
-Excel.Range oUidRng;
-oUidRng = newWorksheet.get_Range("C" + rowCntr.ToString(), "C" + (uids.Count + (rowCntr - 1)).ToString());
-oUidRng.EntireColumn.NumberFormat = "Text";
-oUidRng.EntireColumn.NumberFormatLocal = "Text";
-
-foreach (String ids in uids)
-{ 
-                     
-*/
-/*
- * Excel assumes that 0
- * the Leading 0s cause the cell to formatted as a number 
- * and the leading 0 will be stripped off (lost)
- */
-
-/*
-
-    if ((uids.ToString().Substring(0, 1) == "0") || (uids.ToString().Substring(0, 1) == "O"))
-        newWorksheet.Cells[rowCntr++, colCntr] = "'" + ids.ToString();
-    else
-        newWorksheet.Cells[rowCntr++, colCntr] = ids.ToString();
-}
-
-newWorksheet.Cells[1, 4] = "Label";
-
-rowCntr = 2; colCntr = 4;
-Excel.Range oRng;
-oRng = newWorksheet.get_Range("D" + rowCntr.ToString(), "D" + (uids.Count + (rowCntr - 2)).ToString());
-oRng.Formula = "=AMEE_DATAITEM_LABEL(B2,C2)";
-
-                     
-
-BuildCategoryDetails.GetCategoryDetails();
-
-*/
-
-
-
-
-
 
