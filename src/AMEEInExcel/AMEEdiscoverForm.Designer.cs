@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AMEEdiscoverForm));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,32 @@
             this.panel1.Size = new System.Drawing.Size(784, 61);
             this.panel1.TabIndex = 1;
             // 
+            // forwardButton
+            // 
+            this.forwardButton.Enabled = false;
+            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forwardButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
+            this.forwardButton.Location = new System.Drawing.Point(708, 4);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(64, 48);
+            this.forwardButton.TabIndex = 2;
+            this.forwardButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.forwardButton.UseVisualStyleBackColor = true;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Enabled = false;
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(639, 4);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(64, 48);
+            this.backButton.TabIndex = 1;
+            this.backButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // button1
             // 
             this.button1.Enabled = false;
@@ -73,30 +99,6 @@
             this.button1.Text = "Generate Data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.AMEEdiscoverForm_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Enabled = false;
-            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(639, 4);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(64, 48);
-            this.backButton.TabIndex = 1;
-            this.backButton.Text = "Previous";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // forwardButton
-            // 
-            this.forwardButton.Enabled = false;
-            this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
-            this.forwardButton.Location = new System.Drawing.Point(708, 4);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(64, 48);
-            this.forwardButton.TabIndex = 2;
-            this.forwardButton.Text = "Forward";
-            this.forwardButton.UseVisualStyleBackColor = true;
-            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // AMEEdiscoverForm
             // 
