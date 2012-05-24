@@ -64,11 +64,13 @@
             // 
             // forwardButton
             // 
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.forwardButton.Enabled = false;
             this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forwardButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.forwardButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardButton.Image")));
-            this.forwardButton.Location = new System.Drawing.Point(708, 4);
+            this.forwardButton.Location = new System.Drawing.Point(709, 4);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(64, 48);
             this.forwardButton.TabIndex = 2;
@@ -78,6 +80,8 @@
             // 
             // backButton
             // 
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.backButton.Enabled = false;
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.Location = new System.Drawing.Point(639, 4);

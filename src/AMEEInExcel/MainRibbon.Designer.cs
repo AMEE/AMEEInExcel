@@ -88,7 +88,7 @@
             // 
             // versionLabel
             // 
-            this.versionLabel.Label = "v0.8.0.0";
+            this.versionLabel.Label = "v0.9.0.11";
             this.versionLabel.Name = "versionLabel";
             // 
             // button1
