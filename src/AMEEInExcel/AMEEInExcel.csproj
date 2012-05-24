@@ -39,7 +39,7 @@
     <PublishUrl>..\_setup\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>0.8.0.2</ApplicationVersion>
+    <ApplicationVersion>0.9.0.10</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -153,13 +153,17 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>AMEEInExcel_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>AMEEInExcel.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>77431F66D90E8F77C681E880134D6A1DE211DE9C</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>F7D73AAB660AED2643AB04A0EEF76CC3C1C07D4D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
@@ -295,7 +299,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="AMEEInExcel_TemporaryKey.pfx" />
+    <None Include="AMEEInExcel.pfx" />
     <None Include="DebugTest.xlsm" />
     <None Include="ExcelDna\AMEEInExcel.dna" />
     <None Include="ExcelDna\AMEEInExcel.xll" />

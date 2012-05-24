@@ -164,13 +164,15 @@ namespace AMEEInExcel
 
         private void ThisAddIn_Startup1(object sender, System.EventArgs e)
         {
-            DefineShortcutMenu();
+            /* This can be uncommented for v1.X
+             DefineShortcutMenu();
             Application.SheetBeforeRightClick +=
                 new Excel.AppEvents_SheetBeforeRightClickEventHandler
                     (Application_SheetBeforeRightClick);
             generateWikiList.Click +=
                 new Microsoft.Office.Core._CommandBarButtonEvents_ClickEventHandler
                     (BuildWikiList_Click);
+             */
         }
 
         void BuildWikiList_Click(Office.CommandBarButton Ctrl,
